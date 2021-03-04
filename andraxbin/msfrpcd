@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /opt/ANDRAX/metasploit-framework/
+
+ruby msfrpcd "$@"

@@ -1,0 +1,13 @@
+
+#!/bin/bash
+
+if [[ $EUID -eq 0 ]]; then
+    echo "Don't run as ROOT, leave script handle the sudo request!"
+    exit 1
+fi
+
+sudo chmod -R 777 /opt/ANDRAX/metasploit-framework
+
+cd /opt/ANDRAX/metasploit-framework/
+
+ruby msfconsole "$@"
